@@ -24,9 +24,11 @@
     li {
         margin: 10px 0;
         position: relative;
+        margin-top: 30px;
 
         span { display: block; }
         .title { font-weight: bolder; }
+        .periodical { font-weight: bolder; }
         .author {
             a {
                 border-bottom: 1px dashed $theme-color;

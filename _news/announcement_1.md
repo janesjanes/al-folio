@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2019-4-22
 inline: true
 ---
 
-A simple inline announcement.
+Our paper <u>Kernel Mean Matching for Content Addressability of GANs</u> has been accepted to ICML 2019:  :tada: :tada: :tada:

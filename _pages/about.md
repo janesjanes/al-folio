@@ -1,23 +1,19 @@
 ---
 layout: about
 permalink: /
-title: <strong>Your</strong> Name
-description: <a href="">Affiliations</a>. Address. Contacts. Moto. Etc.
-
+title: <strong style='color:HotPink'>Patsorn</strong> Sangkloy
+description: >
+    PhD student @ <a style='color:HotPink' href='https://ic.gatech.edu/'>School of Interactive Computing - Georgia Tech</a>.
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p> CCB building </p>
+    <p> 801 Atlantic Drive</p>
+    <p> Atlanta, GA 30332</p>
+    
 
 news: true
 social: true
 ---
-
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Patsorn is a PhD student at [Georgia Institute of Technology](http://www.ic.gatech.edu/), advised by [James Hays](http://www.cc.gatech.edu/~hays). She received her Bachelor degree from [Khon Kaen University](http://gear.kku.ac.th/?lang=en) in 2013 and her Master degree from [Brown University](http://www.cs.brown.edu/) in 2015. Her research interests are in sketch understanding, image retrieval/synthesis/editing, and more recently in perception system for autonomous driving. She has been collaborating with [Adobe Research](https://research.adobe.com/) on a number of projects related to controllable image manipulation. Among these, [Scribbler](http://scribbler.eye.gatech.edu/) and [TextureGan](http://texturegan.eye.gatech.edu/) were featured at [Adobe Max 2017](https://www.youtube.com/watch?v=seBbuYiBXSc) as prototypes for potential Adobe products. She is a recipient of Adobe Research Fellowship award, and Royal Thai Government Scholarship.

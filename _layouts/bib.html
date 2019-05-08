@@ -13,34 +13,34 @@
   {% if entry.type == "thesis" %}
     {{reference}}
   {% else %}
-    <span class="title">{{entry.title}}</span>
+    <span class="title"><b>{{entry.title}}</b></span>
     <span class="author">
       {% for author in entry.author_array %}
         {% if forloop.length == 1 %}
           {% if author.last == site.scholar.last_name %}
-            <em>{{author.last}}, {{author.first}}</em>
+            <em>{{author.first}} {{author.last}}</em>
           {% else %}
-            {{author.last}}, {{author.first}}
+            {{author.first}} {{author.last}}
           {% endif %}
         {% else %}
           {% unless forloop.last %}
-            {% if author.last == site.scholar.last_name %}
-              <em>{{author.last}}, {{author.first}}</em>,
+            {% if author.first == 'Patsorn' %}
+              <em>{{author.first}} {{author.last}}</em>,
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>, 
+                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>,
               {% else %}
-                {{author.last}}, {{author.first}},
+                {{author.first}} {{author.last}},
               {% endif %}
             {% endif %}
           {% else %}
             {% if author.last == site.scholar.last_name %}
-              and <em>{{author.last}}, {{author.first}}</em>
+              and <em>{{author.first}} {{author.last}}</em>
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a> 
+                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.first}} {{author.last}}</a>
               {% else %}
-                and {{author.last}}, {{author.first}}
+                and {{author.first}} {{author.last}}
               {% endif %}
             {% endif %}
           {% endunless %}
@@ -52,13 +52,27 @@
     {% if entry.type == "article" %}
       <em>{{entry.journal}}</em>
     {% elsif entry.type == "inproceedings" %}
-      <em>In {{entry.booktitle}}</em>
+      <em>{{entry.booktitle}}</em>
+      {% elsif entry.type == "misc" %}
+        <em>{{entry.howpublished}}</em>
     {% endif %}
     {% if entry.year %}
       {{entry.year}}
     {% endif %}
     </span>
   {% endif %}
+
+  {% if entry.highlight %}
+<div class="highlight">
+<i style="color: HotPink;" class="fas fa-trophy"></i> {{ entry.highlight }}
+</div>
+{% endif %}
+
+{% if entry.equal == "yes" %}
+<div class="highlight">
+<i style="color: HotPink;" class="fas fa-asterisk"></i> Equal contributions
+</div>
+{% endif %}
 
   <span class="links">
   {% if entry.abstract %}
@@ -68,7 +82,7 @@
     [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
   {% endif %}
   {% if entry.html %}
-    [<a href="{{ entry.html }}" target="_blank">HTML</a>]
+    [<a href="{{ entry.html }}" target="_blank">Project Page</a>]
   {% endif %}
   {% if entry.pdf %}
     [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
